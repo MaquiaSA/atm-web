@@ -1,5 +1,8 @@
 package th.ac.ku.atm.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BankAccount {
     private int id;
     private int customerId;
@@ -41,7 +44,7 @@ public class BankAccount {
         return balance;
     }
 
-    public void getBalance(double balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
